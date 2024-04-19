@@ -21,10 +21,10 @@
 
 /*COLORES*/
 :root {
-    --text-uno: hsl(0, 100%, 67%);
-    --text-dos: hsl(39, 100%, 56%);
-    --text-tres: hsl(166, 100%, 37%);
-    --text-for: hsl(234, 85%, 45%);
+    --text-uno: hsla(0, 100%, 67%, 0.1);
+    --text-dos: hsla(39, 100%, 56%, 0.1);
+    --text-tres: hsla(166, 100%, 37%, 0.1);
+    --text-for: hsla(234, 85%, 45%, 0.1);
     /*GRADIENT CAJA */
     --gradient-uno: hsl(252, 100%, 67%);
     --gradient-dos: hsl(241, 81%, 54%);
@@ -47,11 +47,13 @@
     padding: 0px;
 }
 .card__one{
+    position: relative;
+    z-index: 1;
     width: 260px;
     display: flex;
     height: 350px;
     margin-top: 150px;
-    margin-left: 450px;
+    margin-left: 470px;
     border-radius: 30px;
     align-items: center;
     flex-direction: column;
@@ -111,6 +113,7 @@
 
 /*SEGUNDA SECCION*/
 .card_two{
+    z-index: 2;
     display: flex;
     width: 260px;
     height: 330px;
@@ -120,7 +123,6 @@
     border-radius: 20px;
     flex-direction: column;
     align-items: flex-start;
-    box-shadow:  0px 0px 9px #ffefef;
 }
 .title_two{
     display: flex;
@@ -149,14 +151,14 @@
     display: flex;
     margin-left: 10px;
     font-weight: bold;
-    color: var(--text-uno);
+    color: hsl(0, 100%, 67%);
     font-family: Hanken-grotesk-bold;
 }
 .text-number{
     gap: 5px;
     display: flex;
     margin-left: 45px;
-    color: var(--nuetral-three);
+    color: hsla(240, 1%, 75%, 0.76);
     font-family: Hanken-grotesk-bold;
 }
 .blue-number{
@@ -168,7 +170,7 @@
     display: flex;
     margin-left: 10px;
     font-weight: bold;
-    color: var(--text-dos);
+    color: hsl(39, 100%, 56%);
     font-family: Hanken-grotesk-bold;
 }
 /*VERBAL*/
@@ -176,7 +178,7 @@
     display: flex;
     margin-left: 10px;
     font-weight: bold;
-    color: var(--text-tres);
+    color: hsl(166, 100%, 37%);
     font-family: Hanken-grotesk-bold;
 }
 /*VISUAL*/
@@ -184,7 +186,7 @@
     display: flex;
     margin-left: 10px;
     font-weight: bold;
-    color: var(--text-for);
+    color: hsl(234, 85%, 45%);
     font-family: Hanken-grotesk-bold;
 }
 .calor{
@@ -193,12 +195,13 @@
 /*BOTON*/
 .btn{
     width: 200px;
-    height: 50px;
+    height: 40px;
     border: none;
     display: flex;
     font-size: 18px;
-    margin: 0px auto;
-    margin-top: 50px;
+    margin-top: -50px;
+    margin-left: 760px;
+    margin-bottom: 10px;
     border-radius: 30px;
     align-items: center;
     transition: all 500ms;
@@ -209,4 +212,80 @@
 }
 .btn:hover{
     background: var(--gradient_tres);
+}
+.reaction{
+    padding: 5px;
+    height: 30px;
+    width: 200px;
+    border-radius: 5px;
+    background: var(--text-uno);
+}
+.memory{
+    padding: 5px;
+    height: 30px;
+    width: 200px;
+    border-radius: 5px;
+    background: var(--text-dos);
+}
+.verbal{
+    padding: 5px;
+    height: 30px;
+    width: 200px;
+    border-radius: 5px;
+    background: var(--text-tres);
+}
+.visual{
+    padding: 5px;
+    height: 30px;
+    width: 200px;
+    border-radius: 5px;
+    background: hsla(234, 85%, 45%, 0.1);
+}
+
+/*DISPOSITIVOS MOVILES*/
+@media screen and (320px <= width <= 480px){
+
+    .card__one{
+        width: 430px;
+        display: flex;
+        margin-top: -45px;
+        margin-left: -14px;
+        border-end-end-radius: 60px;
+        border-end-start-radius: 60px;
+    }
+    .title{
+        margin-top: 70px;
+    }
+    .card_two{
+        display: flex;
+        padding: 15px;
+        margin-top: 50px;
+        margin-left: 15px;
+        justify-content: center;
+    }
+    .title_two{
+        font-size: 25px;
+        margin-top: -10px;
+    }
+    .reaction,
+    .memory,
+    .verbal,
+    .visual{
+        width: 280px;
+        height: 280px;
+        padding: 20px;
+        display: flex;
+        margin-top: 30px;
+        margin-left: 15px;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn{
+        width: 250px;
+        height: 50px;
+        display: flex;
+        margin-top: 60px;
+        margin-left: 55px;
+        margin-bottom: 50px;
+    }
 }
