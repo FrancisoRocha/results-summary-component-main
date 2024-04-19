@@ -1,0 +1,212 @@
+/*TIPO DE FUENTES*/
+@font-face {
+    font-family: Hanken-grotesk-var;
+    src: url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Hanken-grotesk-bold;
+    src: url(assets/fonts/static/HankenGrotesk-Bold.ttf);
+}
+
+@font-face {
+    font-family: Hanken-grotesk-extra;
+    src: url(assets/fonts/static/HankenGrotesk-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: Hanken-grotesk-medium;
+    src: url(assets/fonts/static/HankenGrotesk-Medium.ttf);
+}
+
+/*COLORES*/
+:root {
+    --text-uno: hsl(0, 100%, 67%);
+    --text-dos: hsl(39, 100%, 56%);
+    --text-tres: hsl(166, 100%, 37%);
+    --text-for: hsl(234, 85%, 45%);
+    /*GRADIENT CAJA */
+    --gradient-uno: hsl(252, 100%, 67%);
+    --gradient-dos: hsl(241, 81%, 54%);
+    /*CIRCLE*/
+    --color-circle-one: hsla(256, 72%, 46%, 1);
+    --color-circle-two: hsla(241, 72%, 46%, 0);
+    /*GRADIENT TWO*/
+    --gradient_tres: hsl(256, 72%, 46%);
+    /*BOTON*/
+    --btn: hsl(224, 30%, 27%);
+    /*NEUTRALES*/
+    --neutral-uno: hsl(0, 0%, 100%);
+    --neutral-two: hsl(221, 100%, 96%);
+    --nuetral-three: hsl(241, 100%, 89%);
+}
+
+/*ESTILO GENERAL*/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.card__one{
+    width: 260px;
+    display: flex;
+    height: 350px;
+    margin-top: 150px;
+    margin-left: 450px;
+    border-radius: 30px;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(199deg, hsl(252, 100%, 67%) 2%, hsl(241, 81%, 54%));
+}
+.title{
+    display: flex;
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+    color: var(--nuetral-three);
+    font-family: Hanken-grotesk-var;
+}
+.circle{
+    display: flex;
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    flex-direction: column;
+    background: linear-gradient(193deg, rgba(0, 0, 0, 0.4) -4%, rgba(77, 33, 202, 0.1) 55%);
+}
+.number{
+    display: flex;
+    font-size: 40px;
+    margin-top: 15px;
+    align-items: center;
+    justify-content: center;
+    color: var(--neutral-uno);
+    font-family: Hanken-grotesk-extra;
+}
+.text{
+    display: flex;
+    font-size: 13px;
+    align-items: center;
+    justify-content: center;
+    color: var(--nuetral-three);
+    font-family: Hanken-grotesk-medium;
+}
+.text_one{
+    display: flex;
+    font-size: 25px;
+    color: var(--neutral-uno);
+    font-family: Hanken-grotesk-bold;
+}
+.text_two{
+    display: flex;
+    padding: 25px;
+    font-size: 15px;
+    margin-top: -10px;
+    text-align: center;
+    color: var(--nuetral-three);
+    font-family: Hanken-grotesk-var;
+}
+
+/*SEGUNDA SECCION*/
+.card_two{
+    display: flex;
+    width: 260px;
+    height: 330px;
+    margin: 0px auto;;
+    margin-top: -340px;
+    margin-right: 390px;
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow:  0px 0px 9px #ffefef;
+}
+.title_two{
+    display: flex;
+    font-size: 18px;
+    margin-top: 11px;
+    margin-left: 30px;
+    color: var(--btn);
+    font-family: Hanken-grotesk-extra;
+}
+.reaction,
+.memory,
+.verbal,
+.visual{
+    display: flex;
+    margin-top: 15px;
+    margin-left: 40px;
+    align-items: center;
+    justify-content: center;
+}
+.icon-one{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.text-reactio{
+    display: flex;
+    margin-left: 10px;
+    font-weight: bold;
+    color: var(--text-uno);
+    font-family: Hanken-grotesk-bold;
+}
+.text-number{
+    gap: 5px;
+    display: flex;
+    margin-left: 45px;
+    color: var(--nuetral-three);
+    font-family: Hanken-grotesk-bold;
+}
+.blue-number{
+    display: flex;
+    color: var(--btn);
+}
+/*MEMORY*/
+.text-memory{
+    display: flex;
+    margin-left: 10px;
+    font-weight: bold;
+    color: var(--text-dos);
+    font-family: Hanken-grotesk-bold;
+}
+/*VERBAL*/
+.text-verbal{
+    display: flex;
+    margin-left: 10px;
+    font-weight: bold;
+    color: var(--text-tres);
+    font-family: Hanken-grotesk-bold;
+}
+/*VISUAL*/
+.text-visual{
+    display: flex;
+    margin-left: 10px;
+    font-weight: bold;
+    color: var(--text-for);
+    font-family: Hanken-grotesk-bold;
+}
+.calor{
+    margin-left: 59px;
+}
+/*BOTON*/
+.btn{
+    width: 200px;
+    height: 50px;
+    border: none;
+    display: flex;
+    font-size: 18px;
+    margin: 0px auto;
+    margin-top: 50px;
+    border-radius: 30px;
+    align-items: center;
+    transition: all 500ms;
+    background: var(--btn);
+    justify-content: center;
+    color: var(--neutral-uno);
+    font-family: Hanken-grotesk-extra;
+}
+.btn:hover{
+    background: var(--gradient_tres);
+}
